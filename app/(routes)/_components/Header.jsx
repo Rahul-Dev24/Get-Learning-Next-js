@@ -21,7 +21,7 @@ const Header = (handelMenuBar) => {
         {/* Search bar here */}
         <div className="flex gap-2 border rounded-md p-2">
           <Search className="w-3 h-5" />
-          <input type="text" placeholder="Search..." className="outline-none" />
+          <input type="text" placeholder="Search..." className="outline-none w-5" />
         </div>
       </div>
       {/* Get started button & bell icon */}
