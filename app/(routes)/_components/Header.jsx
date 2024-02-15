@@ -18,12 +18,12 @@ const Header = (handelMenuBar) => {
           // onClick={() => handelMenuBar()}
           className="p-2 hover:bg-gray-200 cursor-pointer rounded-xl text-white"
         />
-        {/* Search bar here */}
+        {/* Search bar here */} {/*
         <div className="flex gap-2 border rounded-md p-2">
           <Search className="w-3 h-5" />
           <input type="text" placeholder="Search..." className="outline-none w-5" />
         </div>
-      </div>
+      </div> */}
       {/* Get started button & bell icon */}
       <div className="flex items-center gap-3 pr-2">
         <BellDot className="text-gray-500 " />
