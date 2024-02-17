@@ -1,18 +1,26 @@
+"use client";
 import Header from "./_components/Header";
-import React from "react";
+import React, { useState } from "react";
 import SideNav from "./_components/SideNav";
+// import { useState } from "react";
 
 const layout = ({ children }) => {
-  function handelMenuBar() {
-    console.log("clicked");
-  }
+  const [sideNav, setsideNav] = useState("hidden");
+
+  const handelMenuBar = () => {
+    setsideNav("block");
+  };
+  const hidMenu = () => {
+    setsideNav("hidden");
+  };
+
   return (
     <div>
-      <div className="sm:w-64 hidden sm:block fixed">
-        <SideNav />
+      <div className={`sm:w-64 ${sideNav} sm:block fixed`}>
+        <SideNav hidMenu={hidMenu} />
       </div>
       <div className="sm:ml-64">
-        <Header />
+        <Header handelMenuBar={handelMenuBar} />
         {children}
       </div>
     </div>

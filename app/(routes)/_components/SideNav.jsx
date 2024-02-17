@@ -12,7 +12,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
 
-const SideNav = () => {
+const SideNav = ({ hidMenu }) => {
   const user = useUser();
   const menu = [
     {
@@ -61,9 +61,15 @@ const SideNav = () => {
 
   const path = usePathname();
   return (
-    <div className="p-5 bg-white shadow-sm border h-screen">
-      <div>
-        <Image src="/logo.png" alt="logo" width={170} height={80} />
+    <div className="p-5 bg-white shadow-sm border h-screen z-50">
+      <div className="flex">
+        <Image src="/logo.png" alt="logo" width={170} height={80} />{" "}
+        <h1
+          onClick={() => hidMenu()}
+          className="m-2 text-[18px] font-semibold border cursor-pointer pt-1 pb-1 pr-2 pl-2 rounded-xl sm:hidden"
+        >
+          X
+        </h1>
       </div>
       <hr className="mt-7" />
       <div className="mt-5">
@@ -78,7 +84,7 @@ const SideNav = () => {
               }`}
                 >
                   <item.icon className="group-hover:animate-bounce" />
-                  <h2>{item.name}</h2>
+                  <h2 onClick={() => hidMenu()}>{item.name}</h2>
                 </div>
               </Link>
             )

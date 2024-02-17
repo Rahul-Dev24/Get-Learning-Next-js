@@ -28,7 +28,9 @@ const CourseList = () => {
     <div className="p-5 bg-white rounded-lg mt-5">
       {/* title & filter */}
       <div className="flex items-center justify-between">
-        <h2 className="text-[20px] font-bold text-primary">All Courses</h2>
+        <h2 className="text-[16px] font-bold text-primary sm:text-[20px]">
+          All Courses
+        </h2>
         <Select>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Filter" />
@@ -42,7 +44,7 @@ const CourseList = () => {
       </div>
       <br />
       {/* display course list  */}
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {course?.length > 0
           ? course.map((item, index) => (
               <Link href={"/course-preview/" + item.slug}>
