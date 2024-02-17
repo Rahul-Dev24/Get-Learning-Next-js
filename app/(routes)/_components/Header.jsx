@@ -28,6 +28,7 @@ const Header = ({ handelMenuBar }) => {
           />
         </div>
       </div>
+
       {/* Get started button & bell icon */}
       <div className="flex items-center gap-3 pr-2">
         <BellDot className="text-gray-500 cursor-pointer " />

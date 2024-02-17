@@ -2,7 +2,6 @@
 import Header from "./_components/Header";
 import React, { useState } from "react";
 import SideNav from "./_components/SideNav";
-
 const layout = ({ children }) => {
   const [sideNav, setsideNav] = useState("hidden");
 
@@ -12,7 +11,6 @@ const layout = ({ children }) => {
   const hidMenu = () => {
     setsideNav("hidden");
   };
-
   return (
     <div>
       <div className={`sm:w-64 ${sideNav} sm:block fixed`}>
