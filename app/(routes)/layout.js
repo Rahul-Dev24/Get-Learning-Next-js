@@ -2,7 +2,6 @@
 import Header from "./_components/Header";
 import React, { useState } from "react";
 import SideNav from "./_components/SideNav";
-// import { useState } from "react";
 
 const layout = ({ children }) => {
   const [sideNav, setsideNav] = useState("hidden");
